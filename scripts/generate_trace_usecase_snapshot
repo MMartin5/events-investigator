@@ -1,0 +1,9 @@
+#!/bin/bash
+
+lttng create snap-session-cafe --snapshot
+lttng enable-event --kernel --all
+lttng start
+sleep 10
+lttng stop
+lttng snapshot record
+lttng destroy
